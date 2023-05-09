@@ -56,7 +56,7 @@ read -r -p "Please enter name for a user account (leave empty to skip): " userna
 
 # Setting password.
 if [[ -n $username ]]; then
-    read -r -p -s "Please enter a password for the user account: " password
+    read -r -s -p "Please enter a password for the user account: " password
 fi
 
 # Choose locales.
