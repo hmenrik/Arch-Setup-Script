@@ -1,4 +1,8 @@
 ### Introduction
+#henrik
+-gnome +kde
+
+
 This is my fork of [easy-arch](https://github.com/classy-giraffe/easy-arch), a **script** made in order to boostrap a basic **Arch Linux** environment with **snapshots** and **encryption** by using a fully automated process (UEFI only).
 
 This fork comes with various security improvements and fully working rollbacks with snapper. I do submit some of the changes here back to upstream as well.
