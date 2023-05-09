@@ -92,9 +92,9 @@ fi
 echo "Creating new partition scheme on $DISK."
 parted -s "$DISK" \
     mklabel gpt \
-    mkpart ESP fat32 1MiB 128MiB \
+    mkpart ESP fat32 1MiB 1024MiB \
     set 1 esp on \
-    mkpart cryptroot 128MiB 100% \
+    mkpart cryptroot 1024MiB 100% \
 
 sleep 0.1
 ESP="/dev/$(lsblk $DISK -o NAME,PARTLABEL | grep ESP| cut -d " " -f1 | cut -c7-)"
