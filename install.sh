@@ -420,7 +420,7 @@ systemctl enable fstrim.timer --root=/mnt &>/dev/null
 systemctl enable NetworkManager --root=/mnt &>/dev/null
 
 # Enabling GDM.
-systemctl enable gdm --root=/mnt &>/dev/null
+systemctl enable sddm --root=/mnt &>/dev/null
 
 # Enabling AppArmor.
 echo "Enabling AppArmor."
