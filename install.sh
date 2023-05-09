@@ -60,10 +60,10 @@ if [[ -n $username ]]; then
 fi
 
 # Choose locales.
-read -r -p "Please insert the locale you use in this format (xx_XX): " locale
+read -r -p "Please insert the locale you use in this format (xx_XX) exempel (sv_SE): " locale
 
 # Choose keyboard layout.
-read -r -p "Please insert the keyboard layout you use: " kblayout
+read -r -p "Please insert the keyboard layout you use (ex. sv-latin1): " kblayout
 
 
 
@@ -213,7 +213,7 @@ mount -o nodev,nosuid,noexec $ESP /mnt/boot/efi
 # Pacstrap (setting up a base sytem onto the new root).
 # As I said above, I am considering replacing gnome-software with pamac-flatpak-gnome as PackageKit seems very buggy on Arch Linux right now.
 echo "Installing the base system (it may take a while)."
-pacstrap /mnt base ${kernel} ${microcode} linux-firmware grub grub-btrfs snapper snap-pac efibootmgr sudo networkmanager apparmor python-psutil python-notify2 nano gdm gnome-control-center gnome-terminal gnome-software gnome-software-packagekit-plugin gnome-tweaks nautilus pipewire-pulse pipewire-alsa pipewire-jack flatpak firewalld zram-generator adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts gnu-free-fonts reflector mlocate man-db chrony
+pacstrap /mnt base ${kernel} ${microcode} linux-firmware grub grub-btrfs snapper snap-pac efibootmgr sudo networkmanager apparmor python-psutil python-notify2 nano sddm plasma kde-applications nautilus pipewire-pulse pipewire-alsa pipewire-jack flatpak firewalld zram-generator adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts gnu-free-fonts reflector mlocate man-db chrony
 
 # Routing jack2 through PipeWire.
 echo "/usr/lib/pipewire-0.3/jack" > /mnt/etc/ld.so.conf.d/pipewire-jack.conf
