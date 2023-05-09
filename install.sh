@@ -56,7 +56,7 @@ read -r -p "Please enter name for a user account (leave empty to skip): " userna
 
 # Setting password.
 if [[ -n $username ]]; then
-    read -r -p "Please enter a password for the user account: " password
+    read -r -p -s "Please enter a password for the user account: " password
 fi
 
 # Choose locales.
@@ -419,7 +419,7 @@ systemctl enable fstrim.timer --root=/mnt &>/dev/null
 # Enabling NetworkManager.
 systemctl enable NetworkManager --root=/mnt &>/dev/null
 
-# Enabling GDM.
+# Enabling GDM->SDDM.
 systemctl enable sddm --root=/mnt &>/dev/null
 
 # Enabling AppArmor.
